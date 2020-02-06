@@ -1,0 +1,367 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "Bluetooth Headphone Amp"
+Date "2020-01-31"
+Rev "0.1"
+Comp "Gent-Systems"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery_Management:MCP73811T-420I-OT U?
+U 1 1 5E35692A
+P 12950 4550
+F 0 "U?" H 13394 4596 50  0000 L CNN
+F 1 "MCP73811T-420I-OT" H 13394 4505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 13000 4300 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22036b.pdf" H 12700 4800 50  0001 C CNN
+	1    12950 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_USB:FT232RL U?
+U 1 1 5E358F4F
+P 7750 2400
+F 0 "U?" H 7750 3581 50  0000 C CNN
+F 1 "FT232RL" H 7750 3490 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 8850 1500 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 7750 2400 50  0001 C CNN
+	1    7750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E35B534
+P 8200 3500
+F 0 "#PWR?" H 8200 3250 50  0001 C CNN
+F 1 "GND" H 8205 3327 50  0000 C CNN
+F 2 "" H 8200 3500 50  0001 C CNN
+F 3 "" H 8200 3500 50  0001 C CNN
+	1    8200 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3400 7550 3450
+Wire Wire Line
+	7550 3450 7750 3450
+Wire Wire Line
+	8200 3450 8200 3500
+Wire Wire Line
+	7750 3400 7750 3450
+Connection ~ 7750 3450
+Wire Wire Line
+	7750 3450 7850 3450
+Wire Wire Line
+	7850 3400 7850 3450
+Connection ~ 7850 3450
+Wire Wire Line
+	7850 3450 7950 3450
+Wire Wire Line
+	7950 3400 7950 3450
+Connection ~ 7950 3450
+Wire Wire Line
+	7950 3450 8200 3450
+$Comp
+L power:GND #PWR?
+U 1 1 5E35D3D5
+P 6850 3200
+F 0 "#PWR?" H 6850 2950 50  0001 C CNN
+F 1 "GND" H 6855 3027 50  0000 C CNN
+F 2 "" H 6850 3200 50  0001 C CNN
+F 3 "" H 6850 3200 50  0001 C CNN
+	1    6850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3100 6850 3100
+Wire Wire Line
+	6850 3100 6850 3200
+NoConn ~ 6950 2600
+NoConn ~ 6950 2800
+$Comp
+L Device:C C?
+U 1 1 5E35DFFA
+P 6450 1500
+F 0 "C?" H 6565 1546 50  0000 L CNN
+F 1 "100nF" H 6565 1455 50  0000 L CNN
+F 2 "" H 6488 1350 50  0001 C CNN
+F 3 "~" H 6450 1500 50  0001 C CNN
+	1    6450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5E36209B
+P 1400 2300
+F 0 "J?" H 1457 2767 50  0000 C CNN
+F 1 "USB_B_Micro" H 1457 2676 50  0000 C CNN
+F 2 "" H 1550 2250 50  0001 C CNN
+F 3 "~" H 1550 2250 50  0001 C CNN
+	1    1400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead FB?
+U 1 1 5E367DF1
+P 2650 1600
+F 0 "FB?" V 2376 1600 50  0000 C CNN
+F 1 "10nH" V 2467 1600 50  0000 C CNN
+F 2 "" V 2580 1600 50  0001 C CNN
+F 3 "~" H 2650 1600 50  0001 C CNN
+	1    2650 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E36C0D3
+P 3150 1500
+F 0 "#PWR?" H 3150 1350 50  0001 C CNN
+F 1 "+5V" H 3165 1673 50  0000 C CNN
+F 2 "" H 3150 1500 50  0001 C CNN
+F 3 "" H 3150 1500 50  0001 C CNN
+	1    3150 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1600 2950 1600
+Wire Wire Line
+	3150 1600 3150 1500
+$Comp
+L power:GND #PWR?
+U 1 1 5E36F7E1
+P 1850 2800
+F 0 "#PWR?" H 1850 2550 50  0001 C CNN
+F 1 "GND" H 1855 2627 50  0000 C CNN
+F 2 "" H 1850 2800 50  0001 C CNN
+F 3 "" H 1850 2800 50  0001 C CNN
+	1    1850 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2500 1750 2500
+Wire Wire Line
+	1750 2500 1750 2750
+Wire Wire Line
+	1750 2750 1850 2750
+Wire Wire Line
+	1850 2750 1850 2800
+Wire Wire Line
+	1750 2750 1400 2750
+Wire Wire Line
+	1300 2750 1300 2700
+Connection ~ 1750 2750
+Wire Wire Line
+	1400 2700 1400 2750
+Connection ~ 1400 2750
+Wire Wire Line
+	1400 2750 1300 2750
+NoConn ~ 6950 2400
+NoConn ~ 8550 2700
+NoConn ~ 8550 2800
+NoConn ~ 8550 2900
+NoConn ~ 8550 3000
+NoConn ~ 8550 3100
+NoConn ~ 8550 2200
+NoConn ~ 8550 2300
+NoConn ~ 8550 2400
+$Comp
+L power:+5V #PWR?
+U 1 1 5E3873C8
+P 8050 1300
+F 0 "#PWR?" H 8050 1150 50  0001 C CNN
+F 1 "+5V" H 8065 1473 50  0000 C CNN
+F 2 "" H 8050 1300 50  0001 C CNN
+F 3 "" H 8050 1300 50  0001 C CNN
+	1    8050 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 1700 6950 1700
+$Comp
+L power:GND #PWR?
+U 1 1 5E391C2A
+P 6450 1700
+F 0 "#PWR?" H 6450 1450 50  0001 C CNN
+F 1 "GND" H 6455 1527 50  0000 C CNN
+F 2 "" H 6450 1700 50  0001 C CNN
+F 3 "" H 6450 1700 50  0001 C CNN
+	1    6450 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1650 6450 1700
+Wire Wire Line
+	6450 1350 6450 1300
+Wire Wire Line
+	6450 1300 6850 1300
+Wire Wire Line
+	6850 1300 6850 1400
+Wire Wire Line
+	6850 1400 7650 1400
+Connection ~ 6850 1400
+Wire Wire Line
+	6850 1400 6850 1700
+Wire Wire Line
+	7850 1400 8050 1400
+Wire Wire Line
+	8050 1400 8050 1300
+$Comp
+L Device:C C?
+U 1 1 5E3A4B5A
+P 2250 1800
+F 0 "C?" H 2365 1846 50  0000 L CNN
+F 1 "0.1uF" H 2365 1755 50  0000 L CNN
+F 2 "" H 2288 1650 50  0001 C CNN
+F 3 "~" H 2250 1800 50  0001 C CNN
+	1    2250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1650 2250 1600
+Wire Wire Line
+	2250 1600 2500 1600
+Connection ~ 2250 1600
+$Comp
+L power:GND #PWR?
+U 1 1 5E3A5BBD
+P 2250 2000
+F 0 "#PWR?" H 2250 1750 50  0001 C CNN
+F 1 "GND" H 2255 1827 50  0000 C CNN
+F 2 "" H 2250 2000 50  0001 C CNN
+F 3 "" H 2250 2000 50  0001 C CNN
+	1    2250 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1600 1900 2100
+Wire Wire Line
+	1900 2100 1700 2100
+Wire Wire Line
+	1900 1600 2250 1600
+Wire Wire Line
+	2250 2000 2250 1950
+$Comp
+L Device:C C?
+U 1 1 5E3A92F5
+P 2950 1800
+F 0 "C?" H 3065 1846 50  0000 L CNN
+F 1 "10uF" H 3065 1755 50  0000 L CNN
+F 2 "" H 2988 1650 50  0001 C CNN
+F 3 "~" H 2950 1800 50  0001 C CNN
+	1    2950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3A9947
+P 2950 2000
+F 0 "#PWR?" H 2950 1750 50  0001 C CNN
+F 1 "GND" H 2955 1827 50  0000 C CNN
+F 2 "" H 2950 2000 50  0001 C CNN
+F 3 "" H 2950 2000 50  0001 C CNN
+	1    2950 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1650 2950 1600
+Connection ~ 2950 1600
+Wire Wire Line
+	2950 1600 3150 1600
+Wire Wire Line
+	2950 1950 2950 2000
+Text Notes 2950 950  0    50   ~ 0
+Parts to add:\n- 2Ah battery like https://www.sparkfun.com/products/13855\n- figure out Li-Po battery charger like http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf\n- RN-52 bluetooth chip? https://www.sparkfun.com/products/12849
+$Comp
+L SparkFun-RF:BLUETOOTH-RN-52 M?
+U 1 1 5E3B663F
+P 3700 7350
+F 0 "M?" H 3700 9110 45  0000 C CNN
+F 1 "BLUETOOTH-RN-52" H 3700 9026 45  0000 C CNN
+F 2 "RN-52" H 3700 8950 20  0001 C CNN
+F 3 "" H 3700 7350 50  0001 C CNN
+F 4 "IC-11569" H 3700 8931 60  0000 C CNN "Field4"
+	1    3700 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3D5E45
+P 2800 8950
+F 0 "#PWR?" H 2800 8700 50  0001 C CNN
+F 1 "GND" H 2805 8777 50  0000 C CNN
+F 2 "" H 2800 8950 50  0001 C CNN
+F 3 "" H 2800 8950 50  0001 C CNN
+	1    2800 8950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 8450 2800 8450
+Wire Wire Line
+	2900 8850 2800 8850
+Connection ~ 2800 8850
+Wire Wire Line
+	2800 8850 2800 8950
+Wire Wire Line
+	2900 8750 2800 8750
+Connection ~ 2800 8750
+Wire Wire Line
+	2800 8750 2800 8850
+Wire Wire Line
+	2900 8650 2800 8650
+Wire Wire Line
+	2800 8450 2800 8550
+Connection ~ 2800 8650
+Wire Wire Line
+	2800 8650 2800 8750
+Wire Wire Line
+	2900 8550 2800 8550
+Connection ~ 2800 8550
+Wire Wire Line
+	2800 8550 2800 8650
+$Comp
+L power:GND #PWR?
+U 1 1 5E3D9815
+P 4600 8950
+F 0 "#PWR?" H 4600 8700 50  0001 C CNN
+F 1 "GND" H 4605 8777 50  0000 C CNN
+F 2 "" H 4600 8950 50  0001 C CNN
+F 3 "" H 4600 8950 50  0001 C CNN
+	1    4600 8950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 8350 4600 8450
+Wire Wire Line
+	4500 8350 4600 8350
+Wire Wire Line
+	4500 8450 4600 8450
+Connection ~ 4600 8450
+Wire Wire Line
+	4600 8450 4600 8550
+Wire Wire Line
+	4500 8550 4600 8550
+Connection ~ 4600 8550
+Wire Wire Line
+	4600 8550 4600 8650
+Wire Wire Line
+	4500 8650 4600 8650
+Connection ~ 4600 8650
+Wire Wire Line
+	4600 8650 4600 8750
+Wire Wire Line
+	4500 8750 4600 8750
+Connection ~ 4600 8750
+Wire Wire Line
+	4600 8750 4600 8850
+Wire Wire Line
+	4500 8850 4600 8850
+Connection ~ 4600 8850
+Wire Wire Line
+	4600 8850 4600 8950
+$EndSCHEMATC
